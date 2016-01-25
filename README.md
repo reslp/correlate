@@ -47,7 +47,7 @@ ntrees and nmaps specify the number of trees and stochastic maps, chars1 and cha
 4. To calculate the conditional you will also need the probability for each character to appear alone on the tree(s): `prob <- get_prob(simmap_multi)`. This is only needed for one of the mappings, depending on the question you want to ask. See the [wiki](https://en.wikipedia.org/wiki/Conditional_probability) on conditional probaility for further information.
 5. Now you can calculate the conditional probability: `cond <- get_conditional(matrix=corr_matrix, probs=prob)`
 6. correlate also provides the output of the obtained conditional probability distributions as Violin plots:
-(correlate_example.png "Example")
+(https://github.com/reslp/correlate/blob/master/correlate_example.png "Example")
 
 
 LIMITATIONS
