@@ -7,14 +7,14 @@ correlate performes character correlation analyses of categorical (discrete) cha
 DESCRIPTION
 ===========
 
-With this small package you can perform character correlation analyses based on stochastic character maps from two sets of categorical character. This also works for sets of trees (e.g. from a Bayesian posterior tree sample), to take into account phylogenetic uncertainty. The functions in correlate will calculate the conditional probability for character pairs to occur on a particular point on the phylogenetic tree and output them as summarized probability distributions in the analyzed tree space.
+With this small package you can perform character correlation analyses based on stochastic character maps from two sets of categorical character. This also works for sets of trees (e.g. from a Bayesian posterior tree sample), to take into account phylogenetic uncertainty. The functions in correlate will calculate the conditional probability for character pairs to occur on a particular point on the phylogenetic tree and output them as summarized probability distributions in the analyzed tree space. This method is in large parts refers to concepts described in [this paper](http://sysbio.oxfordjournals.org/content/52/2/131.short) by Huelsenbeck et al. (2003) 
 
 
 REQUIREMENTS
 ============
 
 - R 3.2.2
-- R dependecies: devtools, phytools
+- R dependecies: devtools, phytools, ggplot2 (if you want to use the included plotting function)
 - one or more phylogenetic trees
 - characters to map
 
@@ -35,6 +35,8 @@ Now you can install correlate:
 
 
 
+
+
 USAGE
 =====
 I am working on a detailed documentation of the functions in correlate. Meanwhile here is a very brief describtions of what steps are needed for correlate to run:
@@ -47,7 +49,7 @@ ntrees and nmaps specify the number of trees and stochastic maps, chars1 and cha
 4. To calculate the conditional you will also need the probability for each character to appear alone on the tree(s): `prob <- get_prob(simmap_multi)`. This is only needed for one of the mappings, depending on the question you want to ask. See the [wiki](https://en.wikipedia.org/wiki/Conditional_probability) on conditional probaility for further information.
 5. Now you can calculate the conditional probability: `cond <- get_conditional(matrix=corr_matrix, probs=prob)`
 6. correlate also provides the output of the obtained conditional probability distributions as Violin plots:
-(https://github.com/reslp/correlate/blob/master/correlate_example.png "Example")
+(https://github.com/reslp/correlate/blob/master/correlate_example.png). This shows the conditional for binary characters 0 and 1 with the multistate character. For example the very left violin plot 0_bark could be read as: The probability of bark given that character 0 is observed.
 
 
 LIMITATIONS
@@ -57,9 +59,6 @@ Although functional correlate is still in a very early development stage, so be 
 - Correlation of multiple (more then two) sets of characters
 - Improved plotting
 - higher speed and memory efficiency
-
-
-
 
 
 
