@@ -41,7 +41,7 @@ USAGE
 =====
 I am working on a detailed documentation of the functions in correlate. Meanwhile here is a very brief describtions of what steps are needed for correlate to run:
 
-1. Typically you will have a set of 10 stochastic maps for each of 10 trees created with phytools for two character sets named `map1`and `map2` 
+1. Lets assume you have a set of 10 stochastic maps for each of 10 trees created with phytools for two character sets named `map1`and `map2` 
 2. First load correlate: `library(correlate)`
 3. Now you can call the function correlate:
 `corr_matrix <- correlate(ntrees=10, nmaps=10, chars2=c("bark","lichenicolous", "rock", "soil", "wood"), chars1=c(0,1),smap1=map1,smap2=map2)` 
