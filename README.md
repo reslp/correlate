@@ -1,7 +1,7 @@
 correlate
 =========
 
-correlate performes character correlation analyses of categorical (discrete) characters from stochastic character mappings.
+correlate performes character correlation analyses of categorical (discrete) characters based on stochastic character mappings.
 
 
 DESCRIPTION
@@ -48,13 +48,13 @@ I am working on a detailed documentation of the functions in correlate. Meanwhil
 ntrees and nmaps specify the number of trees and stochastic maps, chars1 and chars2 which characters should be analyzed in a pairwise matter. smap1 and smap2 specify the stoachstic maps.
 4. To calculate the conditional you will also need the probability for each character to appear alone on the tree(s): `prob <- get_prob(simmap_multi)`. This is only needed for one of the mappings, depending on the question you want to ask. See the [wiki](https://en.wikipedia.org/wiki/Conditional_probability) on conditional probaility for further information.
 5. Now you can calculate the conditional probability: `cond <- get_conditional(matrix=corr_matrix, probs=prob)`
-6. correlate also provides the output of the obtained conditional probability distributions as Violin plots:
+6. correlate also provides the output of the obtained conditional probability distributions as Violin plots: `plot_correlation(cond, title="title")`
 (https://github.com/reslp/correlate/blob/master/correlate_example.png). This shows the conditional for binary characters 0 and 1 with the multistate character. For example the very left violin plot 0_bark could be read as: The probability of bark given that character 0 is observed.
 
 
 LIMITATIONS
 ===========
-Although functional correlate is still in a very early development stage, so be careful when using this experimental software. Also, there are several features I would like to include. Among those are:
+Although functional, correlate is still in a very early development stage, so be careful when using this experimental software. I give no warranty! Also, there are several features I would like to include. Among those are:
 
 - Correlation of multiple (more then two) sets of characters
 - Improved plotting
