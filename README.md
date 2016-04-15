@@ -3,18 +3,27 @@ correlate
 
 correlate performes character correlation analyses of categorical (discrete) characters based on stochastic character mappings.
 
+Change History
+=================
+April 15, 2016:
+
+	- added correct behavior for single trees
+	- added function summarize_correlate() which produces basic summary statistics.
+	- added possibility to label axis in plot_correlation()
+	- some small code clean-ups
+
 
 DESCRIPTION
 ===========
 
-With this small package you can perform character correlation analyses based on stochastic character maps from two sets of categorical character. This also works for sets of trees (e.g. from a Bayesian posterior tree sample), to take into account phylogenetic uncertainty. The functions in correlate will calculate the conditional probability for character pairs to occur on a particular point on the phylogenetic tree and output them as summarized probability distributions in the analyzed tree space. This method is in large parts refers to concepts described in [this paper](http://sysbio.oxfordjournals.org/content/52/2/131.short) by Huelsenbeck et al. (2003) 
+This small package performs character correlation analyses based on stochastic character maps from two sets of categorical characters. This also works for sets of trees (e.g. from a Bayesian posterior tree sample), to account for phylogenetic uncertainty. The functions in correlate will calculate the conditional probability for character pairs occurring on a particular point on the phylogenetic tree and output them as summarized probability distributions in the analyzed tree space. This method refers to concepts described in [this paper](http://sysbio.oxfordjournals.org/content/52/2/131.short) by Huelsenbeck et al. (2003) 
 
 
 REQUIREMENTS
 ============
 
 - R 3.2.2
-- R dependecies: devtools, phytools, ggplot2 (if you want to use the included plotting function)
+- R dependecies: devtools, phytools,reshape, ggplot2 (if you want to use the included plotting function)
 - one or more phylogenetic trees
 - characters to map
 
@@ -50,6 +59,7 @@ ntrees and nmaps specify the number of trees and stochastic maps, chars1 and cha
 5. Now you can calculate the conditional probability: `cond <- get_conditional(matrix=corr_matrix, probs=prob)`
 6. correlate also provides the output of the obtained conditional probability distributions as Violin plots: `plot_correlation(cond, title="title")`
 (https://github.com/reslp/correlate/blob/master/correlate_example.png). This shows the conditional for binary characters 0 and 1 with the multistate character. For example the very left violin plot 0_bark could be read as: The probability of bark given that character 0 is observed.
+7. By running the built-in function `summarize_correlate(cond)` you will get basic information about the distributions including, means, variance and standard deviation. It will also compare distributions with pairwise wilcox tests.
 
 
 LIMITATIONS
