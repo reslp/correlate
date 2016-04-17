@@ -5,6 +5,10 @@ correlate performes character correlation analyses of categorical (discrete) cha
 
 Change History
 =================
+April 17, 2016:
+	- added documentation for correlate() and get_prob
+
+
 April 15, 2016:
 
 	- added correct behavior for single trees
