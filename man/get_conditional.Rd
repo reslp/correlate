@@ -1,23 +1,26 @@
-\name{get_prob}
-\alias{get_prob}
+\name{get_conditional}
+\alias{get_conditional}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
 \description{
-This function will calculate the probability that single character realizations are observed on a tree.
+Creates conditional probabilities from output of correlate() and get_prob()
 }
 \usage{
-get_prob(sm)
+get_conditional(matrix, probs)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{sm}{
-The stochastic map which should be analyzed.
+  \item{matrix}{
+probability matrix as created by correlate()
+}
+  \item{probs}{
+probability matrix as created by get_prob()
 }
 }
 \details{
-Will provide results for all characters found in stochastic maps.
+%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 %%  ~Describe the value returned
@@ -45,6 +48,7 @@ Will provide results for all characters found in stochastic maps.
 %%##---- Should be DIRECTLY executable !! ----
 %%##-- ==>  Define data, use random,
 %%##--	or do  help(data=index)  for the standard data sets.
+
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

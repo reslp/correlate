@@ -7,7 +7,7 @@ Change History
 =================
 April 17, 2016:
 
-	- added documentation for correlate() and get_prob()
+	- added documentation for some functions
 
 
 April 15, 2016:
