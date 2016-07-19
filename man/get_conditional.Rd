@@ -1,7 +1,7 @@
 \name{get_conditional}
 \alias{get_conditional}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{get_intersect
+\title{get_conditional
 %%  ~~function to do ... ~~
 }
 \description{
