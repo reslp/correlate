@@ -1,7 +1,7 @@
 \name{get_intersect}
 \alias{get_intersect}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
+\title{get_intersect
 %%  ~~function to do ... ~~
 }
 \description{
