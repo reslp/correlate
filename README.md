@@ -95,7 +95,7 @@ Although functional, correlate is still in a very early development stage, so be
 COPYRIGTH AND LICENSE
 =====================
 
-Copyright (C) 2015 Philipp Resl
+Copyright (C) 2016 Philipp Resl
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
