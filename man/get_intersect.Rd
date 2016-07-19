@@ -1,5 +1,5 @@
-\name{correlate}
-\alias{correlate}
+\name{get_intersect}
+\alias{get_intersect}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
@@ -8,7 +8,7 @@
 This is the core function of the correlate package. It will create the intersect probability  for pairwise character combinations from stochastic maps.
 }
 \usage{
-correlate(ntrees = 1, nmaps = 1, smap1 = simmap, smap2 = simmap_multi, chars2 = c("A","B"), chars1 = c(0, 1))
+get_intersect(ntrees = 1, nmaps = 1, smap1 = simmap, smap2 = simmap_multi, chars2 = c("A","B"), chars1 = c(0, 1))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

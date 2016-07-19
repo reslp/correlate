@@ -5,6 +5,15 @@ correlate performes character correlation analyses of categorical (discrete) cha
 
 Change History
 =================
+July 19, 2016
+
+	 - new version 0.2
+	 - added function to perform Pagel'S 1994 correlation test on multiple trees
+	 - functions for correlation test have been renamed for consistency
+	 - small bug fixes
+	
+
+
 April 17, 2016:
 
 	- added documentation for some functions
@@ -58,13 +67,19 @@ I am working on a detailed documentation of the functions in correlate. Meanwhil
 1. Lets assume you have a set of 10 stochastic maps for each of 10 trees created with phytools for two character sets named `map1`and `map2` 
 2. First load correlate: `library(correlate)`
 3. Now you can call the function correlate:
-`corr_matrix <- correlate(ntrees=10, nmaps=10, chars2=c("bark","lichenicolous", "rock", "soil", "wood"), chars1=c(0,1),smap1=map1,smap2=map2)` 
+`corr_matrix <- get_intersect(ntrees=10, nmaps=10, chars2=c("bark","lichenicolous", "rock", "soil", "wood"), chars1=c(0,1),smap1=map1,smap2=map2)` 
 ntrees and nmaps specify the number of trees and stochastic maps, chars1 and chars2 which characters should be analyzed in a pairwise matter. smap1 and smap2 specify the stoachstic maps.
-4. To calculate the conditional you will also need the probability for each character to appear alone on the tree(s): `prob <- get_prob(simmap_multi)`. This is only needed for one of the mappings, depending on the question you want to ask. See the [wiki](https://en.wikipedia.org/wiki/Conditional_probability) on conditional probaility for further information.
+4. To calculate the conditional you will also need the probability for each character to appear alone on the tree(s): `prob <- get_marginal(simmap_multi)`. This is only needed for one of the mappings, depending on the question you want to ask. See the [wiki](https://en.wikipedia.org/wiki/Conditional_probability) on conditional probaility for further information.
 5. Now you can calculate the conditional probability: `cond <- get_conditional(matrix=corr_matrix, probs=prob)`
 6. correlate also provides the output of the obtained conditional probability distributions as Violin plots: `plot_correlation(cond, title="title")`
 (https://github.com/reslp/correlate/blob/master/correlate_example.png). This shows the conditional for binary characters 0 and 1 with the multistate character. For example the very left violin plot 0_bark could be read as: The probability of bark given that character 0 is observed.
 7. By running the built-in function `summarize_correlate(cond)` you will get basic information about the distributions including, means, variance and standard deviation. It will also compare distributions with pairwise wilcox tests.
+
+
+Pagel'S (1994) test:
+
+This test can be performed with the function `pagel_multi`. It takes a list of trees and two character distributions for the tree tips as named vectors as input: `pagel_multi(trees, character_a, character_b)`. It will fit two models to each tree in the list and perform chi-squared tests on log-likelihood differences of the models. The function returns an object of class "pagel", which includes log-likelihoods for both models, likelihood ratios and p-values of the chi-squared test. This object may be plotted with plot(pagel). Plotting requires ggplot2.
+
 
 
 LIMITATIONS
