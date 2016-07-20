@@ -1,3 +1,4 @@
+#' @export
 plot.pagel <- function(pagels, what="",...) {
   library(reshape2)
   library(ggplot2)

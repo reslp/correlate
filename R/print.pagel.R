@@ -1,3 +1,4 @@
+#' @export
 print.pagel <- function(pagels) {
   cat("Summary of Pagels correlation test\n")
   if (pagels$multi == T) {cat("Test performed on multiple trees.\n") }

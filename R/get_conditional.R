@@ -1,3 +1,4 @@
+#' @export
 ## calculates conditional from dfs created with correlate() and get_prob()
 get_conditional <- function(matrix, probs) {
   increment <- ncol(matrix) / ncol(probs)

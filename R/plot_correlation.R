@@ -1,3 +1,4 @@
+#' @export
 plot_correlation <- function(cond=cond, title="", xlab="", ylab="") {
   require(reshape2)
   require(ggplot2)

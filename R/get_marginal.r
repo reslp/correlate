@@ -1,3 +1,4 @@
+#' @export
 #function get_marginal, will extract P(character) from the provided stochastic maps per tree
 #needed for later calculation of conditional
 get_marginal <- function(sm){

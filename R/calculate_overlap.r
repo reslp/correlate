@@ -1,3 +1,5 @@
+#' @export
+#' 
 require(phytools)
 
 calculate_overlap <- function(c1_min=0, c1_max=0, c2_min=0, c2_max=0){

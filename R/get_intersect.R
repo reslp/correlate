@@ -1,3 +1,4 @@
+#' @export
 get_intersect <- function(ntrees=1,nmaps=1,smap1=simmap, smap2=simmap_multi, chars2= c(0,1), chars1 = c(0,1)) {
   ### function currently only accepts lists of multiPhylo objects, stochastic maps of single trees will be converted to lists
   if (class(smap1) != "list") { #single trees, behaviour unclear for otherwise formatted phylo objects

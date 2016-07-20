@@ -1,3 +1,4 @@
+#' @export
 ## fit Pagels test for binary character correlation for multiple trees
 # borrows a few ideas and lines of code from the phytools function fitPagel
 pagel_multi <- function(trees, a, b) {

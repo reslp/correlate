@@ -1,3 +1,4 @@
+#' @export
 summarize_correlate <- function (cond = cond) {
   require(reshape2)
   cat ("Summary statistics of character correlation based on ", nrow(cond), " trees.\n")
