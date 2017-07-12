@@ -2,9 +2,9 @@ Package: correlate
 Type: Package
 Title: Character correlation with phylogenetic trees
 Version: 0.2
-Date: 2016-07-19
+Date: 2017-07-12
 Author: Philipp Resl
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Maintainer: philipp.resl@uni-graz.at
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
 LazyData: TRUE
