@@ -5,6 +5,10 @@ correlate performes character correlation analyses of categorical (discrete) cha
 
 Change History
 =================
+
+July 12, 2017
+  - added some basic documentation for the three core functions get_intersect(), get_marginal() and get_conditional().
+
 July 19, 2016
 
 	 - new version 0.2
@@ -76,7 +80,7 @@ ntrees and nmaps specify the number of trees and stochastic maps, chars1 and cha
 7. By running the built-in function `summarize_correlate(cond)` you will get basic information about the distributions including, means, variance and standard deviation. It will also compare distributions with pairwise wilcox tests.
 
 
-Pagel'S (1994) test:
+Pagel's (1994) test:
 
 This test can be performed with the function `pagel_multi`. It takes a list of trees and two character distributions for the tree tips as named vectors as input: `pagel_multi(trees, character_a, character_b)`. It will fit two models to each tree in the list and perform chi-squared tests on log-likelihood differences of the models. The function returns an object of class "pagel", which includes log-likelihoods for both models, likelihood ratios and p-values of the chi-squared test. This object may be plotted with plot(pagel). Plotting requires ggplot2.
 
@@ -95,7 +99,7 @@ Although functional, correlate is still in a very early development stage, so be
 COPYRIGTH AND LICENSE
 =====================
 
-Copyright (C) 2016 Philipp Resl
+Copyright (C) 2016, 2017 Philipp Resl
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

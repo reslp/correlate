@@ -56,9 +56,7 @@ Philipp Resl
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-data(placopsis)
-
-require(phytools)
+add example code
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
