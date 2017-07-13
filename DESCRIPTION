@@ -5,7 +5,7 @@ Version: 0.2
 Date: 2017-07-12
 Author: Philipp Resl
 Maintainer: philipp.resl@uni-graz.at
-Description: More about what it does (maybe more than one line)
+Description: This package performes correlation analyses of categorical characters based on phylogenetic trees.
 License: What license is it under?
 LazyData: TRUE
 RoxygenNote: 6.0.1
