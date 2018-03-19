@@ -3,8 +3,10 @@ Type: Package
 Title: Character correlation with phylogenetic trees
 Version: 0.2
 Date: 2017-07-12
+Authors@R: c(person("Philipp", "Resl", role = c("aut", "cre"),
+                     email = "philipp.resl@bio.lmu.de"))
 Author: Philipp Resl
-Maintainer: philipp.resl@uni-graz.at
+Maintainer: Philipp Resl <philipp.resl@bio.lmu.de>
 Description: This package performes correlation analyses of categorical characters based on phylogenetic trees.
 License: What license is it under?
 LazyData: TRUE
