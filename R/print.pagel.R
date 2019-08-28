@@ -1,6 +1,11 @@
-#' @export
+#' Prints the results of a multi-tree Pagel analysis.
+#' 
+#' This functions provides print functionality for a multi-tree Pagel analyses results created with pagel_multi.
+#' @param pagels Results created by pagel_multi.
+#' @examples
+#' print(pagels)
 print.pagel <- function(pagels) {
-  cat("Summary of Pagels correlation test\n")
+  cat("Summary of Pagel's correlation test\n")
   if (pagels$multi == T) {cat("Test performed on multiple trees.\n") }
   else {cat("Test performed on single tree.\n")}
   cat("\nHypothesis test results:\n")

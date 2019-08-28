@@ -6,8 +6,14 @@ correlate performes character correlation analyses of categorical (discrete) cha
 Change History
 =================
 
+August 28, 2019
+ 
+  	- added basic documentation for all functions in correlate.
+
+
 July 12, 2017
-  - added some basic documentation for the three core functions get_intersect(), get_marginal() and get_conditional().
+ 
+  	- added some basic documentation for the three core functions get_intersect(), get_marginal() and get_conditional().
 
 July 19, 2016
 
@@ -41,7 +47,7 @@ REQUIREMENTS
 ============
 
 - R 3.2.2
-- R dependecies: devtools, phytools,reshape, ggplot2 (if you want to use the included plotting function)
+- R dependecies: devtools, phytools and reshape, ggplot2 (if you want to use the included plotting function)
 - one or more phylogenetic trees
 - characters to map
 
@@ -99,7 +105,7 @@ Although functional, correlate is still in a very early development stage, so be
 COPYRIGTH AND LICENSE
 =====================
 
-Copyright (C) 2016, 2017 Philipp Resl
+Copyright (C) 2016-2019 Philipp Resl
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

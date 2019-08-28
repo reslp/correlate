@@ -10,4 +10,4 @@ Maintainer: Philipp Resl <philipp.resl@bio.lmu.de>
 Description: This package performes correlation analyses of categorical characters based on phylogenetic trees.
 License: What license is it under?
 LazyData: TRUE
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

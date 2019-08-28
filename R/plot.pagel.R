@@ -1,5 +1,11 @@
-#' @export
-plot.pagel <- function(pagels, what="",...) {
+#' Plots the results of a multi-tree Pagel correlation analysis.
+#' 
+#' This function plots the results of a multi-tree Pagel correlation analysis created with pagel_multi. Depends on reshape2 and ggplot2.
+#' @param pagel The results of pagel_multi.
+#' @param what Select which parameter to plot. Options = "lik", "pvalue". Default = "pvalue"
+#' @examples
+#' plot(pagels, what="lik")
+plot.pagel <- function(pagels, what="", ...) {
   library(reshape2)
   library(ggplot2)
   if (class(pagels) != "pagel") {

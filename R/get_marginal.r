@@ -1,7 +1,12 @@
-#' @export
-#function get_marginal, will extract P(character) from the provided stochastic maps per tree
-#needed for later calculation of conditional
+#' Calculate the marginal probability of character occurrence.
+#' 
+#' This function calculates the marginal probability of observing a particular character on the provided phylogenetic tree(s). Will return a dataframe containing the marginal probabilities of character occurrence for each character.
+#' @param smap List of multiPhylo objects containing stochastic character maps created with phytools.
+#' @examples
+#' get_marginal(smap)
 get_marginal <- function(sm){
+  #function get_marginal, will extract P(character) from the provided stochastic maps per tree
+  #needed for later calculation of conditional
   if (class(sm) != "list") { #single trees, behaviour unclear for otherwise formatted phylo objects
     sim <- vector("list", 1)
     sim[[1]] <- sm

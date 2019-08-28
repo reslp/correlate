@@ -1,4 +1,15 @@
-#' @export
+#' Calculating character overlap for two independent stochastic character mappings
+#' 
+#' This function calculates the overlapping parts of two (or more) sets of stochastically mapped categorical characters. As input it takes two sets of stochastic maps created with the R package phytools. It will return the proportion of the tree where two characters overlap.
+#'
+#' @param ntrees The number of trees which should be analysed. default = 1
+#' @param nmaps The number of stochastic character maps which should be analysed per tree. default = 1
+#' @param smap1 List of multiPhylo Objects containing stochastic maps for first character. Created with phytools.
+#' @param smap2 List of multiPhylo Objects containing stochastic maps for second character. Created with phytools.
+#' @param chars2 Vector containing character state names which should be analysed for the first set of characters.
+#' @param chars1 Vector containing character state names which should be analysed for the second set of characters.
+#' @examples
+#' get_intersect(ntrees = 1, nmaps = 1, smap1 = simmap, smap2 = simmap_multi, chars2 = c(0, 1), chars1 = c(0, 1))
 get_intersect <- function(ntrees=1,nmaps=1,smap1=simmap, smap2=simmap_multi, chars2= c(0,1), chars1 = c(0,1)) {
   ### function currently only accepts lists of multiPhylo objects, stochastic maps of single trees will be converted to lists
   if (class(smap1) != "list") { #single trees, behaviour unclear for otherwise formatted phylo objects

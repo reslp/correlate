@@ -1,4 +1,12 @@
-#' @export
+#' Plots a conditional probability from correlate distribution as a violin plot.
+#' 
+#' This function plots a conditional probability distribution created with get_conditional as a violin plot. This functions depends on reshape2 and ggplot2.
+#' @param cond dataframe with conditional probabilities created with get_conditional.
+#' @param title Title of plot. Default = no title
+#' @param xlab Label for x-axis. Default = no label
+#' @param ylab Label for y-axis. Default = no label
+#' @examples
+#' plot_correlation(cond, title, xlab, ylab)
 plot_correlation <- function(cond=cond, title="", xlab="", ylab="") {
   require(reshape2)
   require(ggplot2)

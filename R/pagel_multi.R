@@ -1,13 +1,17 @@
-#' @export
-## fit Pagels test for binary character correlation for multiple trees
-# borrows a few ideas and lines of code from the phytools function fitPagel
+#' Runs Pagel's correlation method for multiple trees.
+#' 
+#' Runs Pagel's test for binary character correlation for multiple trees. Borrows a few ideas and lines of code from the phytools function fitPagel.
+#' @param tree Multiphylo object with phylogenetic trees.
+#' @param a Character distribution for first character.
+#' @param b Character distribution for second character.
+#' @examples
+#' pagel_multi(trees, a, b)
 pagel_multi <- function(trees, a, b) {
   if (!is.factor(a)) a <- as.factor(a)
   names_a <- levels(a)
   if (!is.factor(b)) b <- as.factor(b)
   names_b <- levels(b)
   comb_names <- setNames(factor(paste(a,b,sep="_"), levels=sapply(names_a,paste,names_b,sep="_")),names(a))
-
   #prepare transition rate matrices
   Q_ind <- matrix(c(0, 1, 2, 0, 3, 0, 0, 2, 4, 0, 0, 1, 0, 4, 3, 0), 4, 4, byrow = TRUE)
   rownames(Q_ind) <- levels(comb_names)
